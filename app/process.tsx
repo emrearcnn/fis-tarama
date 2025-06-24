@@ -5,8 +5,8 @@ import { processReceipt, ReceiptData } from './services/api';
 
 // API URL sabiti - mobil için Mac IP'si
 const API_URL = Platform.select({
-  ios: 'http://192.168.3.23:3001',
-  android: 'http://192.168.3.23:3001',
+  ios: 'http://192.168.1.3:3001',
+  android: 'http://192.168.1.3:3001',
   default: 'http://localhost:3001', // Web için localhost
 });
 
@@ -28,9 +28,9 @@ export default function ProcessScreen() {
       
       console.log('Starting to process image...');
       
-      // Timeout ekle (30 saniye)
+      // Timeout ekle (90 saniye)
       const timeoutPromise = new Promise((_, reject) => 
-        setTimeout(() => reject(new Error('İşlem zaman aşımına uğradı (30 saniye)')), 30000)
+        setTimeout(() => reject(new Error('İşlem zaman aşımına uğradı (90 saniye)')), 90000)
       );
       
       const data = await Promise.race([

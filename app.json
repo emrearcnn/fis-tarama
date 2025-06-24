@@ -2,6 +2,7 @@
   "expo": {
     "name": "Fiş Tarama",
     "slug": "fis-tarama",
+    "main": "index.js",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -11,6 +12,7 @@
     "ios": {
       "bundleIdentifier": "com.fistarama.app",
       "supportsTablet": true,
+      "hermes": false,
       "infoPlist": {
         "NSCameraUsageDescription": "Bu uygulama fişleri taramak için kameraya erişim gerektirir",
         "NSPhotoLibraryUsageDescription": "Bu uygulama galeri resimlerini seçmek için fotoğraf erişimi gerektirir"
@@ -26,7 +28,8 @@
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.WRITE_EXTERNAL_STORAGE"
-      ]
+      ],
+      "hermes": false
     },
     "web": {
       "bundler": "metro",
